@@ -7,7 +7,7 @@
         <table class="table mt-3">
             <thead>
                 <tr>
-                    <th>Booking ID</th>
+                    <th>Car</th>
                     <th>Return Date</th>
                     <th>Days Rented</th>
                     <th>Rental Cost</th>
@@ -16,7 +16,7 @@
             <tbody>
                 @forelse($returns as $return)
                     <tr>
-                        <td>{{ $return->booking_id }}</td>
+                        <td>{{ $return->car->brand }} {{ $return->car->model }}</td>
                         <td>{{ $return->return_date }}</td>
                         <td>{{ $return->days_rented }}</td>
                         <td>${{ $return->rental_cost }}</td>
